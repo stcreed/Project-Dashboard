@@ -1,11 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
+}
+
+.whiteBackText {
+    color: rgb(84, 83, 83);
 }
 
 ul {
     display: block;
     list-style-type: none;
+}
+
+html, body {
+    height: 100%;
 }
 
 /* sections */
@@ -14,7 +23,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr;
-    height: 100vh;
+    height: 100%;
 }
 
 .rightside {
@@ -23,16 +32,18 @@ ul {
 
 .body {
     background-color: rgb(217, 228, 237);
-    height: 90vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 80vw;
     position: absolute;
-    width: 80%;
     z-index: -1;
+    height: 80vh;
 }
 
 .header {
     background-color: white;
     box-shadow: 0 5px 6px grey;
+    height: 20vh;
 }
 
 /* nav top section */
@@ -40,7 +51,7 @@ ul {
 .topnav {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    padding-top: 20px;
     align-items: center;
 }
 
@@ -132,6 +143,10 @@ ul {
     grid-row: 1 / 3;
 }
 
+.welcome img:hover {
+    box-shadow: 0 0 5px rgb(0, 174, 255);
+}
+
 .welcome p {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
@@ -149,17 +164,10 @@ ul {
 }
 
 .navbuttons button {
-    background: #3498db;
-    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-    background-image: -o-linear-gradient(top, #3498db, #2980b9);
-    background-image: linear-gradient(to bottom, #3498db, #2980b9);
-    -webkit-border-radius: 24;
-    -moz-border-radius: 24;
-    border-radius: 24px;
-    color: #ffffff;
-    font-size: 18px;
+    background-color: white;
+    color: rgb(84, 83, 83);
+    font-size: 20px;
+    font-weight: 800;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     border: none;
@@ -177,6 +185,7 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 0;
+    height: 100%;
 }
 
 .sidebar-nav {
@@ -226,4 +235,86 @@ ul {
 }
 
 
+/* body */
 
+.feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: 1rem 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.sidefeed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    padding-right: 1.5rem;
+}
+
+.blockTitles {
+    margin-top: 0.2rem;
+    margin-bottom: -0.5rem;
+    grid-column: 1 /-1;
+}
+
+.flex {
+    background-color: white;
+    border-radius: 13px;
+    box-shadow: 0 0 3px 1px black;
+    display: grid;
+    grid-template: 1fr auto / 1rem 1fr;
+}
+
+.flexside {
+    background-color: white;
+    padding: 1rem 1rem;
+    border-radius: 13px;
+    box-shadow: 0 0 2px 1px rgba(84, 84, 84, 0.762);
+}
+
+.colorblock {
+    grid-row: 1 /-1;
+    border-radius: 13px 0 0 13px;
+    background-color: #00B4CC;
+}
+
+.flextext {
+    padding: 1rem 1rem 0 1rem;
+}
+
+.flextext p {
+    padding-top: 0.5rem;
+}
+
+.actionblock {
+    margin-left: auto;
+}
+
+.flex i {
+    color: grey;
+    min-width: 25px;
+    text-align: center;
+    margin: 0 2px;
+    font-size: 1.4em;
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+}
+
+.Announcement {
+    padding: 1rem 1rem;
+}
+
+.Announcement p {
+    font-size: 0.8em;
+}
+
+.Announcement-border {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+}
